@@ -1,0 +1,10 @@
+## Travis CI Integration
+
+language: c
+
+install:
+  - sudo apt-get install mono-devel mono-gmcs nunit-console
+script:
+  - xbuild UnitTestProject1/UnitTestProject1.sln
+  - nunit-console UnitTestProject1/bin/Debug/UnitTestProject1.dll
+  
